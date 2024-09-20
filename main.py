@@ -39,6 +39,10 @@ def main():
             if a.has_collided(player):
                 print("Game over!")
                 return
+            for s in shots:
+                if a.has_collided(s):
+                    a.kill()
+                    s.kill()
         for d in drawable:
             d.draw(screen)
         pygame.display.flip()
