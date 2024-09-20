@@ -41,8 +41,8 @@ def main():
                 return
             for s in shots:
                 if a.has_collided(s):
-                    a.kill()
                     s.kill()
+                    a.split()
         for d in drawable:
             d.draw(screen)
         pygame.display.flip()
